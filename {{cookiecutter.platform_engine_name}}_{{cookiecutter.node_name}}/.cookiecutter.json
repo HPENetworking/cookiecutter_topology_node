@@ -1,0 +1,14 @@
+{
+    "node_name": "{{ cookiecutter.node_name }}",
+    "platform_engine_name": "{{ cookiecutter.platform_engine_name }}",
+    "class_name": "{{ cookiecutter.class_name }}",
+    "default_docker_image": "your_default_docker_image",
+    "author": "{{ cookiecutter.author }}",
+    "email": "{{ cookiecutter.email }}",
+    "repo_url": "{{ cookiecutter.repo_url }}",
+    "doc_url": "{{ cookiecutter.doc_url }}",
+    "project_name": "{{ cookiecutter.project_name }}",
+    "short_description": "{{ cookiecutter.short_description }}",
+    "year": "{{ cookiecutter.year }}",
+    "version": "{{ cookiecutter.version }}"
+}

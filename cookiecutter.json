@@ -1,0 +1,14 @@
+{
+    "node_name": "your_node",
+    "platform_engine_name": "your_platform_engine",
+    "class_name": "node_class_name",
+    "default_docker_image": "your_default_docker_image",
+    "author": "Hewlett Packard Enterprise Development LP",
+    "email": "hpe-networking@lists.hp.com",
+    "repo_url": "https://github.com/HPENetworking/{{ cookiecutter.platform_engine_name }}_{{ cookiecutter.node_name }}",
+    "doc_url": "{{ cookiecutter.repo_url }}/tree/master/doc",
+    "project_name": "{{ cookiecutter.node_name }} node for {{ cookiecutter.platform_engine_name }}",
+    "short_description": "A short description of your node.",
+    "year": "2016",
+    "version": "0.1.0"
+}
