@@ -16,7 +16,7 @@
 # under the License.
 
 """
-Cookiecutter Topology Node module
+{{ cookiecutter.node_name }} node module
 """
 
 from __future__ import unicode_literals, absolute_import
