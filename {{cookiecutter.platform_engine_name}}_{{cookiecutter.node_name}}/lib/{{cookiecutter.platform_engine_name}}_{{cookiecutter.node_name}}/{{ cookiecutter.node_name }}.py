@@ -28,7 +28,7 @@ from topology.node import CommonNode
 
 # Same for the base shell imported here, this class incorporates common shell
 # utilities and can be changed or removed if necessary too.
-from topology.shell import PexpectBashShell
+from topology.shell import PExpectBashShell
 
 
 class {{ cookiecutter.class_name }}(CommonNode):
