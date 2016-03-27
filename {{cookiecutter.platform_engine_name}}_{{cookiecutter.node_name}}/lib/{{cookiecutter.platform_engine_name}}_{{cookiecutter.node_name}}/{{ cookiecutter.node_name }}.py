@@ -24,11 +24,11 @@ from __future__ import print_function, division
 
 # Topology already includes a base class for nodes that includes certain
 # capabilities commonly used. This can be changed or removed if necessary.
-from topology.node import CommonNode
+from topology.platforms.base import CommonNode
 
 # Same for the base shell imported here, this class incorporates common shell
 # utilities and can be changed or removed if necessary too.
-from topology.shell import PExpectBashShell
+from topology.platforms.shell import PExpectBashShell
 
 
 class {{ cookiecutter.class_name }}(CommonNode):
@@ -44,7 +44,7 @@ class {{ cookiecutter.class_name }}(CommonNode):
         super({{ cookiecutter.class_name }}, self).__init__(identifier, **kwargs)
 
         # Set your shells as needed
-        self._shells['bash'] = PexpectBashShell()
+        self._shells['bash'] = PExpectBashShell()
 
 
 __all__ = ['{{ cookiecutter.class_name }}']
