@@ -16,32 +16,35 @@
 # under the License.
 
 """
-Simple host Topology Docker Node using Ubuntu.
+Cookiecutter Topology Node module
 """
 
 from __future__ import unicode_literals, absolute_import
 from __future__ import print_function, division
 
-from topology_docker.node import DockerNode
-from topology_docker.shell import DockerShell
+# Topology already includes a base class for nodes that includes certain
+# capabilities commonly used. This can be changed or removed if necessary.
+from topology.node import CommonNode
+
+# Same for the base shell imported here, this class incorporates common shell
+# utilities and can be changed or removed if necessary too.
+from topology.shell import PexpectBashShell
 
 
-class {{ cookiecutter.class_name }}(DockerNode):
+class {{ cookiecutter.class_name }}(CommonNode):
     """
-    {{ cookiecutter.node_name }} for the Topology Docker platform engine.
+    {{ cookiecutter.node_name }} for the {{ cookiecutter.platform_engine }} platform engine.
 
-    See :class:`topology_docker.node.DockerNode`.
+    See :class:`topology.base.CommonNode` for more information.
     """
 
     # Change this method as needed
-    def __init__(self, identifier, image='{{ cookiecutter.default_docker_image }}', **kwargs):
+    def __init__(self, identifier, **kwargs):
 
-        super({{ cookiecutter.class_name }}, self).__init__(identifier, image=image, **kwargs)
+        super({{ cookiecutter.class_name }}, self).__init__(identifier, **kwargs)
 
         # Set your shells as needed
-        self._shells['bash'] = DockerShell(
-            self.container_id, 'sh -c "TERM=dumb bash"', 'root@.*:.*# '
-        )
+        self._shells['bash'] = PexpectBashShell()
 
 
 __all__ = ['{{ cookiecutter.class_name }}']
