@@ -33,7 +33,7 @@ from topology.platforms.shell import PExpectBashShell
 
 class {{ cookiecutter.class_name }}(CommonNode):
     """
-    {{ cookiecutter.node_name }} for the {{ cookiecutter.platform_engine }} platform engine.
+    {{ cookiecutter.node_name }} for the {{ cookiecutter.platform_engine_name }} platform engine.
 
     See :class:`topology.base.CommonNode` for more information.
     """
