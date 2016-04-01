@@ -1,7 +1,7 @@
 {
     "node_name": "your_node",
-    "platform_engine_name": "your_platform_engine",
-    "class_name": "node_class_name",
+    "platform_engine_name": "topology_your_platform_engine",
+    "class_name": "YourNodeName",
     "author": "Hewlett Packard Enterprise Development LP",
     "email": "hpe-networking@lists.hp.com",
     "repo_url": "https://github.com/HPENetworking/{{ cookiecutter.platform_engine_name }}_{{ cookiecutter.node_name }}",
